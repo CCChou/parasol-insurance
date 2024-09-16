@@ -291,8 +291,8 @@ spec:
             annotations:
               openshift.io/description: ''
               openshift.io/display-name: My Workbench
-              volume.beta.kubernetes.io/storage-provisioner: openshift-storage.rbd.csi.ceph.com
-              volume.kubernetes.io/storage-provisioner: openshift-storage.rbd.csi.ceph.com
+              volume.beta.kubernetes.io/storage-provisioner: ebs.csi.aws.com
+              volume.kubernetes.io/storage-provisioner: ebs.csi.aws.com
             name: $WORKBENCH_NAME
             namespace: $USER_PROJECT
             finalizers:
@@ -305,7 +305,7 @@ spec:
             resources:
               requests:
                 storage: 5Gi
-            storageClassName: ocs-storagecluster-ceph-rbd
+            storageClassName: gp3-csi
             volumeMode: Filesystem
           EOF
 
