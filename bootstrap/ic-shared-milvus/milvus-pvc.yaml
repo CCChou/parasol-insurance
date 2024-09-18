@@ -4,7 +4,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: vectordb-milvus
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
   labels:
     app.kubernetes.io/name: milvus
     app.kubernetes.io/instance: vectordb
